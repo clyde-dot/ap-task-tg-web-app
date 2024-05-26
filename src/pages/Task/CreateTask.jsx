@@ -11,9 +11,9 @@ const CreateTask = () => {
     tg.MainButton.setParams({ text: "Создать задачу" });
 
     const onSendData = useCallback(() => {
-        const data = { companyName, operatorName };
+        const data = { companyName, operatorName, taskDescription };
         tg.sendData(JSON.stringify(data));
-    }, [tg, companyName, operatorName]);
+    }, [tg, companyName, operatorName, taskDescription]);
 
     useEffect(() => {
         tg.onEvent("mainButtonClicked", onSendData);

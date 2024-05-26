@@ -57,3 +57,8 @@ a {
     width: 300px;
     font-size: 20px;
 }
+
+.form-input textarea {
+    width: 300px;
+    font-size: 20px;
+}
