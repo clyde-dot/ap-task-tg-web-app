@@ -6,6 +6,7 @@ const CreateTask = () => {
     const { tg } = useTelegram();
     const [companyName, setCompanyName] = useState("АПРО");
     const [operatorName, setOperatorName] = useState("Оператор - 1 / Айсултан");
+    const [taskDescription, setTaskDescription] = useState("");
 
     tg.MainButton.setParams({ text: "Создать задачу" });
 
@@ -26,6 +27,14 @@ const CreateTask = () => {
     };
     const onChangeOperator = (e) => {
         setOperatorName(e.target.value);
+    };
+    const onChangeTaskDescription = (e) => {
+        setTaskDescription(e.target.value);
+        if (!taskDescription) {
+            tg.MainButton.hide();
+        } else {
+            tg.MainButton.show();
+        }
     };
     return (
         <div className="form">
@@ -53,6 +62,13 @@ const CreateTask = () => {
                         <option value="АТК Кызмет">АТК Кызмет</option>
                         <option value="СПК-Актобе">СПК-Актобе</option>
                     </select>
+                </div>
+                <div>
+                    <textarea
+                        placeholder="Введите описание задачи..."
+                        value={taskDescription}
+                        onChange={onChangeTaskDescription}
+                    ></textarea>
                 </div>
             </div>
         </div>
