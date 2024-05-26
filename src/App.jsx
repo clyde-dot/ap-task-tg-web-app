@@ -1,18 +1,23 @@
 import { useEffect } from "react";
 import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import Auth from "./pages/Auth";
+import ErrorPage from "./pages/Error/ErrorPage";
+
 const tg = window.Telegram.WebApp;
 
 function App() {
     useEffect(() => {
         tg.ready();
     }, []);
-    const onClose = () => {
-        tg.close();
-    };
+
     return (
-        <div className="App">
-            <button onClick={onClose}>Закрыть окно</button>
-        </div>
+        <>
+            <Routes>
+                <Route path="/auth" element={<Auth />} />
+                <Route path="/*" element={<ErrorPage />} />
+            </Routes>
+        </>
     );
 }
 
