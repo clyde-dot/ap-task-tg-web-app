@@ -2,4 +2,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 25px;
+}
+.form-title {
+    font-size: 24px;
+}
+.form-input input {
+    width: 300px;
+    font-size: 20px;
 }

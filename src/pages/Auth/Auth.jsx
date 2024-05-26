@@ -3,10 +3,10 @@ import "./Auth.css";
 const Auth = () => {
     return (
         <div className="form-auth">
-            <div className="auth-title">
-                Авторизация пользователя в системе:{" "}
+            <div className="form-title">Авторизация пользователя в системе</div>
+            <div className="form-input">
+                <input type="password" placeholder="Введите секретный ключ:" />
             </div>
-            <input type="password" placeholder="Введите секретный ключ:" />
         </div>
     );
 };

@@ -5,7 +5,7 @@ const Home = () => {
     return (
         <div className="container">
             <Link to="/">Основное меню</Link>
-            <Link to="/">Основное меню</Link>
+            <Link to="/auth">Форма Авторизаций</Link>
         </div>
     );
 };
