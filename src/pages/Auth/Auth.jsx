@@ -1,24 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./Auth.css";
 import useTelegram from "../../hooks/useTelegram";
 const Auth = () => {
     const { tg } = useTelegram();
-
-    useEffect(() => {
-        tg.MainButton.setParams({ text: "Войти" });
-    }, []);
-
-    useEffect(() => {
-        if (userPassword.length >= 8) {
-            tg.MainButton.hide();
-        } else {
-            tg.MainButton.show();
-        }
-    }, [userPassword]);
-
     const [userPassword, setUserPassword] = useState("");
+    tg.MainButton.setParams({ text: "Войти" });
+
     const onChangePassword = (e) => {
         setUserPassword(e.target.value);
+        if (userPassword.length >= 8) {
+            tg.MainButton.show();
+        } else {
+            tg.MainButton.hide();
+        }
     };
     return (
         <div className="form-auth">
