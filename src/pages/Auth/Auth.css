@@ -8,7 +8,18 @@
 .form-title {
     font-size: 24px;
 }
+.form-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 15px;
+}
 .form-input input {
+    width: 300px;
+    font-size: 20px;
+}
+.form-input select {
     width: 300px;
     font-size: 20px;
 }
