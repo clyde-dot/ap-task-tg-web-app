@@ -21,7 +21,7 @@ const Auth = () => {
     }, [tg, onSendData]);
     const onChangePassword = (e) => {
         setUserPassword(e.target.value);
-        if (userPassword.length >= 8) {
+        if (userPassword.length >= 7) {
             tg.MainButton.show();
         } else {
             tg.MainButton.hide();
