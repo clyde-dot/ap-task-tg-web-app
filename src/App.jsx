@@ -6,6 +6,7 @@ import ErrorPage from "./pages/Error/ErrorPage";
 import Home from "./pages/Home/Home";
 import Header from "./components/Header/Header";
 import useTelegram from "./hooks/useTelegram";
+import CreateTask from "./pages/Task/CreateTask";
 
 function App() {
     const { tg } = useTelegram();
@@ -19,6 +20,7 @@ function App() {
             <Header />
             <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="/createTask" element={<CreateTask />} />
                 <Route path="/auth" element={<Auth />} />
                 <Route path="/*" element={<ErrorPage />} />
             </Routes>

@@ -31,7 +31,7 @@ const Auth = () => {
         setUserRole(e.target.value);
     };
     return (
-        <div className="form-auth">
+        <div className="form">
             <div className="form-title">Авторизация пользователя в системе</div>
             <div className="form-input">
                 <div>
