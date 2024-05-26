@@ -3,12 +3,11 @@ import "./Header.css";
 import { FcShipped } from "react-icons/fc";
 const Header = (props) => {
     return (
-        <header>
-            <span>
-                Task-Tracker
+        <header className="header">
+            <div className="logo">
+                <span>Task-Tracker</span>
                 <FcShipped />
-            </span>
-            <button {...props} className={"button " + props.className} />
+            </div>
         </header>
     );
 };
